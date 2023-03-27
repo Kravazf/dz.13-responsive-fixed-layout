@@ -1,0 +1,13 @@
+:root {
+  --color: #000000;
+}
+
+@import "./vendors/normalize";
+@import "./vendors/fonts";
+@import "./layout/common";
+@import "./layout/header";
+@import"./components/button";
+@import"./components/hover";
+@import"./components/nav-menu-header";
+@import "./layout/main";
+@import "./layout/footer";

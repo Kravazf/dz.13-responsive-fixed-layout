@@ -1,0 +1,126 @@
+#header {
+    border-bottom: 1px solid #cccccc;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+  }
+
+  .container-logos-header {
+    max-width: 1388px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  .logos-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;   
+  }
+
+  .logo-header:first-child a{
+    display: block;
+  }
+
+  .logo-header {
+    padding: 5px 0 0 4px;
+    width: 90px;
+
+    @media (min-width: 768px) {
+      width: 110px;
+    }
+  
+    @media (min-width: 992px) {
+      width: 115px;
+    }
+  
+    @media (min-width: 1200px) {
+      width: 130px;
+    }
+  }
+
+  .logo-nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .navigation {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    @media (min-width: 992px) {
+      position: static;
+    }
+
+  }
+
+  #opener {
+    display: none;
+
+    &:checked {
+      ~.nav-menu-header {
+        transform: translate(0%);
+      }
+
+      ~.opener {
+        border-color: #ffffff;
+      }
+
+      ~.opener {
+        span {
+          opacity: 0;
+        }
+        &:before {
+          top: 50%;
+          transform: translate(-50%, -50%) rotate(45deg);
+          background-color: #ffffff;
+        }
+        &:after {
+          top: 50%;
+          transform: translate(-50%, -50%) rotate(-45deg);
+          background-color: #ffffff;
+        }
+      }
+    }
+  }
+
+  .opener {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #000000;
+    border-radius: 4px;
+    z-index: 99;
+    top: 20px;
+    right: 20px;
+
+    @media (min-width: 992px) {
+      display: none;
+    }
+
+    span,
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      height: 2px;
+      background: #000000;
+      transition: all 0.3s;
+    }
+
+     &:before {
+      top: calc(50% - 10px);
+     }
+
+     &::after {
+      top: calc(50% + 10px);
+     }
+  }
