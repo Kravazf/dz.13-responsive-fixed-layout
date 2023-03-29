@@ -4,12 +4,13 @@
   
   .wrap-top-footer {
     padding: 25px 0 25px 0;
-    display: flex;
+    display: block;
     justify-content: space-between;
     border-bottom: 1px solid #000000;
 
     @media (min-width: 768px) {
       padding: 35px 0 35px 0;
+      display: flex;
     }
   
     @media (min-width: 992px) {
@@ -22,14 +23,16 @@
   }
   
   .left-cont-footeer {
-    max-width: 300px;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
-    font-size: 12px;
+    font-size: 15px;
     line-height: calc(30/20);
+    text-align: center;
 
     @media (min-width: 768px) {
-      font-size: 15px;
+      max-width: 300px;
+      text-align: start;
     }
   
     @media (min-width: 992px) {
@@ -42,13 +45,14 @@
   }
   
   .left-cont-footeer h4 {
-    margin: 0 0 32px 0;
+    margin: 0 0 10px 0;
     font-weight: 600;
     font-size: 20px;
     line-height: calc(50/40);
 
     @media (min-width: 768px) {
       font-size: 25px;
+      margin: 0 0 32px 0;
     }
   
     @media (min-width: 992px) {
@@ -61,7 +65,11 @@
   }
 
   .left-cont-footeer :nth-child(2) {
-    margin: 0 0 31px 0;
+    margin: 0 0 10px 0;
+
+    @media (min-width: 768px) {
+      margin: 0 0 31px 0;
+    }
   }
   
   .left-cont-footeer :nth-child(3) {
@@ -70,25 +78,38 @@
   }
   
   .left-cont-footeer p {
-    margin: 0 0 14px 0;
+    margin: 0 0 7px 0;
+    text-align: start;
+
+    @media (min-width: 768px) {
+      margin: 0 0 14px 0;
+    }
   }
   
   .left-cont-footeer a {
     text-decoration: none;
     font-weight: 600;
     max-width: 107px;
+    margin: 0 auto;
+
+    @media (min-width: 768px) {
+      margin: 0;
+    }
   }
   
   .cont-nav-footer {
-    padding: 7px 11px 0 11px;
+    padding: 11px 11px 0 11px;
     width: 100%;
-    display: flex;
     justify-content: space-between;
-    font-size: 10px;
+    font-size: 12px;
     line-height: calc(15/15);
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
 
     @media (min-width: 768px) {
-      font-size: 11px;
+      padding-top: 7px;
+      text-align: start;
     }
   
     @media (min-width: 992px) {
@@ -103,13 +124,9 @@
   }
   
   .cont-nav-footer .column-nav h5 {
-    margin: 0 0 21px 0;
-    font-size: 12px;
+    margin: 0 0 10px 0;
+    font-size: 15px;
     line-height: calc(25/20);
-
-    @media (min-width: 768px) {
-      font-size: 15px;
-    }
   
     @media (min-width: 992px) {
       font-size: 17px;
@@ -121,17 +138,33 @@
   }
   
   .column-nav {
-    width: 21%;
+    width: 50%;
+
+    @media (min-width: 768px) {
+      width: 21%;
+      }
   }
   
   .menu-footer {
     list-style: none;
+    display: flex;
     margin: 0;
     padding: 0 0 0 5px;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    @media (min-width: 768px) {
+    margin: 0;
+    display: block;
+    }
   }
   
   .column-nav li {
-    margin: 0 0 15px 0;
+    margin: 0 0 10px 0;
+
+    @media (min-width: 768px) {
+      margin: 0 0 15px 0;
+    }
   }
   
   .footer-bottom {

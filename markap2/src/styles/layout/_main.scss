@@ -10,16 +10,15 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  font-size: 12px;
+  font-size: 15px;
   line-height: calc(35/25);
 
   @media (min-width: 768px) {
-    font-size: 15px;
+    font-size: 18px;
   }
 
   @media (min-width: 992px) {
     padding: 30px 0px 40px 3px;
-    font-size: 18px;
     flex-wrap: nowrap;
   }
 
@@ -51,7 +50,7 @@ h1 {
 }
 
 .text-small {
-  font-size: 9px;
+  font-size: 10px;
   line-height: calc(25/15);
 
   @media (min-width: 768px) {
@@ -144,6 +143,11 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  flex-direction: column;
+
+  @media (min-width: 576px) {
+    flex-direction: row;
+  }
 
   @media (min-width: 1200px) {
     margin: 0 -26px;
@@ -152,8 +156,16 @@ h1 {
 }
 
 .company-list>li {
-  margin: 0 auto;
+  margin: 10px auto;
   padding: 0 5%;
+
+  @media (min-width: 576px) {
+    margin: 0 auto;
+  }
+
+  @media (min-width: 768px) {
+    margin: 0 auto;
+  }
 
   @media (min-width: 1200px) {
     margin: 0 -26px;
@@ -166,16 +178,19 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 12px;
+  font-size: 15px;
   line-height: calc(30/20);
+  flex-direction: column;
+  text-align: center;
 
   @media (min-width: 768px) {
-    font-size: 14px;
+    font-size: 17px;
     padding: 30px 0px;
+    flex-direction: row;
+    text-align: start;
   }
 
   @media (min-width: 992px) {
-    font-size: 17px;
     padding: 60px 0px;
   }
 
@@ -186,9 +201,13 @@ h1 {
 }
 
 .info-control {
-  max-width: 50%;
+  max-width: 100%;
   padding-right: 10px;
   margin-top: -17px;
+
+   @media (min-width: 768px) {
+    max-width: 50%;
+  }
 }
 
 .info-control div+a{
@@ -197,9 +216,13 @@ h1 {
 }
 
 .img-presentation {
-  max-width: 50%;
+  max-width: 100%;
   box-shadow:  0px 4px 4px 0 rgba(0, 0, 0, 0.25);
   background-color: #FFF8E4;
+  
+  @media (min-width: 768px) {
+    max-width: 50%;
+  }
 }
 
 .info-control h2 {
@@ -232,7 +255,11 @@ h1 {
 }
 
 .container .container-control:nth-child(2n) {
-  flex-direction: row-reverse;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    flex-direction: row-reverse;
+  }
 }
 
 .container :nth-child(2n) .info-control {
@@ -270,15 +297,15 @@ h1 {
   margin: 0;
   padding: 0;
   justify-content: center;
-  font-size: 12px;
+  font-size: 15px;
   line-height: calc(25/18);
 
   @media (min-width: 768px) {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   @media (min-width: 992px) {
-    font-size: 15px;
+    font-size: 17px;
   }
 
   @media (min-width: 1200px) {
@@ -287,12 +314,17 @@ h1 {
 }
 
 .lokalise-info li {
-  width: 33%;
+  width: 100%;
   text-align: center;
   padding: 0 18px 30px 20px;
 
+  @media (min-width: 768px) {
+    width: 50%;
+  }
+
   @media (min-width: 992px) {
     padding: 0 25px 35px 30px;
+    width: 33%;
   }
 
   @media (min-width: 1200px) {
@@ -333,7 +365,7 @@ h1 {
 
 .container-lokalise h3 {
   font-weight: 600;
-  font-size: 15px;
+  font-size: 20px;
   line-height: calc(35/25);
   margin: 0 0 24px 0;
 
@@ -356,11 +388,11 @@ h1 {
 
 .container-productivity {
   padding: 30px 0 30px 0;
-  font-size: 12px;
+  font-size: 15px;
   line-height: calc(30/20);
 
   @media (min-width: 768px) {
-    font-size: 14px;
+    font-size: 16px;
     padding: 50px 0 50px 0;
   }
 
@@ -403,6 +435,11 @@ h1 {
 
 .productivity-img img {
   width: auto;
+  margin-top: 10px;
+
+  @media (min-width: 768px) {
+    margin-top: 0;
+  }
 }
 
 .container-productivity h2 {
@@ -410,10 +447,12 @@ h1 {
   font-weight: 600;
   font-size: 25px;
   line-height: calc(60/50);
+  text-align: center;
 
   @media (min-width: 768px) {
     font-size: 30px;
     margin: 0 0 40px 0;
+    text-align: start;
   }
 
   @media (min-width: 992px) {
@@ -428,10 +467,15 @@ h1 {
 }
 
 .container-productivity .lokalise-info-2 li {
-  max-width: 33%;
-  text-align: left;
+  max-width: 100%;
+  text-align: center;
   padding-right: 31px;
   margin-right: -16px;
+
+  @media (min-width: 768px) {
+    text-align: left;
+    max-width: 33%;
+  }
 }
 
 .container-productivity h3 {
@@ -440,7 +484,6 @@ h1 {
   line-height: calc(40/30);
 
   @media (min-width: 768px) {
-    font-size: 20px;
     margin: 0 0 20px 0;
   }
 
@@ -460,7 +503,11 @@ h1 {
 }
 
 .container-productivity .fonts-a {
-  margin: 0 0 26px 0;
+  margin: 0 0 -10px 0;
+
+  @media (min-width: 768px) {
+    margin: 0 0 26px 0;
+  }
 }
 
 .bg-cont {
@@ -473,8 +520,10 @@ h1 {
   font-size: 15px;
   line-height: calc(40/30);
   padding: 30px 0px 30px 0px;
+  flex-direction: column-reverse;
 
   @media (min-width: 768px) {
+    flex-direction: row;
     font-size: 20px;
     padding: 35px 0px 55px 0px;
   }
@@ -509,9 +558,12 @@ h1 {
 
 .cite-text {
   margin: 0;
-  padding-right: 60px;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: 768px) {
+    padding-right: 60px;
+  }
 }
 
 .cite-text img {
@@ -528,7 +580,12 @@ h1 {
 }
 
 .photo-avtor {
+  margin-bottom: 10px;
   margin-top: -7px;
+
+  @media (min-width: 768px) {
+  margin-bottom: 0;
+}
 }
 
 .bg-cont-2 {
@@ -540,9 +597,11 @@ h1 {
   align-items: center;
   padding: 30px 0 30px 0;
   justify-content: space-between;
+  flex-direction: column;
 
   @media (min-width: 768px) {
     padding: 38px 0 48px 0;
+    flex-direction: row;
   }
 
   @media (min-width: 992px) {
@@ -558,14 +617,19 @@ h1 {
   margin: 0;
   display: flex;
   align-items: center;
-  max-width: 60%;
+  max-width: 100%;
   font-weight: 600;
   font-size: 20px;
   line-height: calc(50/35);
   flex-wrap: wrap;
+  flex-direction: column-reverse;
+  text-align: center;
 
   @media (min-width: 768px) {
     font-size: 25px;
+    max-width: 60%;
+    flex-direction: row;
+    text-align: left;
   }
 
   @media (min-width: 992px) {
@@ -584,14 +648,21 @@ h1 {
 
 .right-translation-contant {
   list-style: none;
-  margin: 0 5px 0 0;
-  padding: 31px 10px 0 70px;
   display: flex;
-  flex-wrap: wrap;
+  padding: 0;
+  flex-direction: column;
+  
+ 
+  @media (min-width: 768px) {
+  margin: 0 5px 0 0;
+  padding: 31px 10px 0 110px;
   border-left: 1px solid #000000;
-  justify-content: space-between;
   min-height: 168px;
   width: 37%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+  }
 }
 
 .container-translation-soft img {
@@ -599,20 +670,24 @@ h1 {
 }
 
 .right-translation-contant li {
-  margin: 0 5px 0 0;
+  margin: 0 5%;
   display: flex;
   flex-direction: column;
-  padding: 10% 0;
-  width: 50%;
+  padding: 5% 0;
 
   @media (min-width: 1200px) {
     margin: 0;
     padding: 0;
+    width: 50%;
   }
 }
 
 .left-translation-contant img {
-  margin: 0 47px 0 0;
+  margin: 0;
+
+  @media (min-width: 768px) {
+    margin: 0 47px 0 0;
+  }
 }
 
 .right-translation-contant li img:first-child {
@@ -632,11 +707,11 @@ h1 {
   flex-direction: column;
   align-items: center;
   padding: 30px 0 40px 0;
-  font-size: 12px;
+  font-size: 15px;
   line-height: calc(30/25);
 
   @media (min-width: 768px) {
-    font-size: 16px;
+    font-size: 17px;
     padding: 50px 0 70px 0;
   }
 
@@ -702,12 +777,11 @@ h1 {
   flex-direction: column;
   align-items: center;
   padding: 30px 0 40px 0;
-  font-size: 12px;
+  font-size: 15px;
   line-height: calc(30/20);
   text-align: center;
 
   @media (min-width: 768px) {
-    font-size: 15px;
     padding: 35px 0 45px 0;
   }
 
@@ -767,11 +841,10 @@ h1 {
 
 .container-why-wait a {
   text-decoration: none;
-  font-size: 8px;
+  font-size: 10px;
   line-height: calc(60/16);
 
   @media (min-width: 768px) {
-    font-size: 10px;
   }
 
   @media (min-width: 992px) {

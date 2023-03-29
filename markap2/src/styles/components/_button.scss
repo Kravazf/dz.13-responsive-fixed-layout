@@ -1,9 +1,13 @@
 .btn-header {
     list-style : none;
     margin: 0;
-    padding: 0 30% 0 0;
+    padding: 20px 30% 0 0;
     display: flex;
     align-items: center;
+
+    @media (min-width: 576px) {
+      padding: 0 30% 0 0;
+    }
   
     @media (min-width: 992px) {
       padding: 0;
@@ -25,12 +29,12 @@
     border: 1px solid rgba(0, 0, 0, 0.5) ;
     background-color: #ffffff;
     font-weight: 700;
-    font-size: 8px;
+    font-size: 10px;
     line-height: calc(60/16);
 
     @media (min-width: 768px) {
+      font-size: 12px;
       width: 100px;
-      font-size: 10px;
     }
   
     @media (min-width: 992px) {
@@ -45,8 +49,20 @@
   }
   
   .btn-litle {
-    width: 120px;
+    width: 80px;
     line-height: calc(45/16);
+    padding: 4px 0;
+
+    @media (min-width: 576px) {
+      width: 100px;
+      padding: 0;
+    }
+
+    @media (min-width: 768px) {
+      width: 120px;
+      font-size: 10px;
+    }
+
   }
   
   .btn-orange {

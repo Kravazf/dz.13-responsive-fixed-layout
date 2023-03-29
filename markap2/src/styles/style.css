@@ -382,6 +382,7 @@ img {
 
 .logos-header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 24px 0;
@@ -454,15 +455,21 @@ img {
 .opener {
   position: relative;
   display: block;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border: 2px solid #000000;
   border-radius: 4px;
   z-index: 99;
   top: 20px;
   right: 20px;
 }
-@media (min-width: 992px) {
+@media (min-width: 576px) {
+  .opener {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (min-width: 576px) and (min-width: 992px) {
   .opener {
     display: none;
   }
@@ -479,10 +486,10 @@ img {
   transition: all 0.3s;
 }
 .opener:before {
-  top: calc(50% - 10px);
+  top: calc(50% - 7px);
 }
 .opener::after {
-  top: calc(50% + 10px);
+  top: calc(50% + 7px);
 }
 
 .btn-header {
@@ -536,8 +543,22 @@ img {
 }
 
 .btn-litle {
-  width: 120px;
+  width: 80px;
   line-height: 2.8125;
+  margin: 20px 0 0 0;
+  padding: 4px 0;
+}
+@media (min-width: 576px) {
+  .btn-litle {
+    width: 100px;
+    padding: 4px 0;
+  }
+}
+@media (min-width: 768px) {
+  .btn-litle {
+    width: 120px;
+    font-size: 10px;
+  }
 }
 
 .btn-orange {
@@ -615,7 +636,7 @@ a:hover:before {
   display: flex;
   background-color: #FF6336;
   flex-direction: column;
-  padding: 60px 0 0 0;
+  padding: 60px 0 0 10px;
   margin: 0;
   position: fixed;
   list-style: none;
